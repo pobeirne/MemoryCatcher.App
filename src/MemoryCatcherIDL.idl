@@ -1,0 +1,68 @@
+module mc{
+            
+        struct User{
+            long id;	
+            string name;
+            string pwd;
+            boolean online;
+            long tokens;
+            string joinDate;
+	};	
+        
+        struct Memory {            
+            long id;
+            long ownerId;            	
+            string title;
+            string desc;                
+            boolean active;
+            string createDate;            
+        };       
+
+        struct Resource{
+            long id;
+            long memoryId;
+            long ownerId;
+            string type;   
+            string location; 
+            string createDate;  
+        };
+
+
+        typedef sequence<User> UserList;
+        typedef sequence<User> FriendList;
+        typedef sequence<Memory> MemoryList;
+        typedef sequence<Resource> ResourceList;
+   
+
+        interface MemoryCatcher{      
+                                
+                UserList getAllUsers();
+                User getUserByName(in string name); 
+                User getUserById(in long userId);                 
+                boolean addUser(in string name,in string pass);
+                boolean updateUser(in User user);
+                boolean removeUser(in long userId); 
+
+
+                FriendList getAllFriends(in long userId);               
+                boolean addFriend(in long user_a, in long user_b);
+                boolean updateFriend(in long user_a, in long user_b ,in boolean active);
+                boolean removeFriend(in long user_a, in long user_b );   
+                
+                
+                MemoryList getAllMemories();
+                MemoryList getAllUserMemories(in long userId);
+                boolean addMemory(in long ownerId,in string title, in string desc);
+                boolean updateMemory(in Memory memory);
+                boolean removeMemory(in long memoryId); 
+                
+                ResourceList getAllResources(in long memoryId);               
+                boolean addResource(in long memoryId, in long ownerId, in string type, in string location);
+                boolean updateResource(in Resource res);
+                boolean removeResource(in long resId );   
+                
+        
+	};
+
+
+}; 
