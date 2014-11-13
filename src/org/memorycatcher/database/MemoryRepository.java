@@ -22,7 +22,7 @@ import java.util.Properties;
 public class MemoryRepository implements IMemoryRepository{
     
     
-     private final String CONFIG_PATH = "C:\\MemoryCatcher_P1\\"
+     private final String CONFIG_PATH = "C:\\MemoryCatcherApp\\"
             + "src\\dbconfig.properties";
     private final Connection myConn;
     private Statement myStmt;
