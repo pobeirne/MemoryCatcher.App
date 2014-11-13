@@ -1,4 +1,4 @@
-module mc{
+module MemoryCatcherApp{
             
         struct User{
             long id;	
