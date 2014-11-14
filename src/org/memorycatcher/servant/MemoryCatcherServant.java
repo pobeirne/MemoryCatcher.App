@@ -20,7 +20,7 @@ import org.memorycatcher.database.ResourceRepository;
  *
  * @author pobeirne
  */
-public class Servant extends _MemoryCatcherImplBase {
+public class MemoryCatcherServant extends _MemoryCatcherImplBase {
 
     //Users
     private UserRepository uRep;
@@ -61,7 +61,7 @@ public class Servant extends _MemoryCatcherImplBase {
             }
             return userArr;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return userArr;
         }
     }
@@ -73,7 +73,7 @@ public class Servant extends _MemoryCatcherImplBase {
             user = uRep.getUserByName(name);
             return user;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return user;
         }
     }
@@ -85,7 +85,7 @@ public class Servant extends _MemoryCatcherImplBase {
             user = uRep.getUserById(userId);
             return user;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return user;
         }
     }
@@ -96,7 +96,7 @@ public class Servant extends _MemoryCatcherImplBase {
             uRep = new UserRepository();
             return uRep.addUser(name, pass);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -107,7 +107,7 @@ public class Servant extends _MemoryCatcherImplBase {
             uRep = new UserRepository();
             return uRep.updateUser(user);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -118,7 +118,7 @@ public class Servant extends _MemoryCatcherImplBase {
             uRep = new UserRepository();
             return uRep.removeUser(userId);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -138,7 +138,7 @@ public class Servant extends _MemoryCatcherImplBase {
             }
             return friendArr;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return friendArr;
         }
     }
@@ -149,7 +149,7 @@ public class Servant extends _MemoryCatcherImplBase {
             fRep = new FriendRepository();
             return fRep.addFriend(user_a, user_b);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -160,7 +160,7 @@ public class Servant extends _MemoryCatcherImplBase {
             fRep = new FriendRepository();
             return fRep.updateFriend(user_a, user_b, active);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -172,7 +172,7 @@ public class Servant extends _MemoryCatcherImplBase {
             return fRep.removeFriend(user_a, user_b);
 
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -192,7 +192,7 @@ public class Servant extends _MemoryCatcherImplBase {
             }
             return memoryArr;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return memoryArr;
         }
     }
@@ -208,7 +208,7 @@ public class Servant extends _MemoryCatcherImplBase {
             }
             return memoryArr;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return memoryArr;
         }
     }
@@ -219,7 +219,7 @@ public class Servant extends _MemoryCatcherImplBase {
             mRep = new MemoryRepository();
             return mRep.addMemory(ownerId, title, desc);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -230,7 +230,7 @@ public class Servant extends _MemoryCatcherImplBase {
             mRep = new MemoryRepository();
             return mRep.updateMemory(memory);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -241,7 +241,7 @@ public class Servant extends _MemoryCatcherImplBase {
             mRep = new MemoryRepository();
             return mRep.removeMemory(memoryId);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -261,7 +261,7 @@ public class Servant extends _MemoryCatcherImplBase {
             }
             return resourceArr;
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return resourceArr;
         }
     }
@@ -272,7 +272,7 @@ public class Servant extends _MemoryCatcherImplBase {
             rRep = new ResourceRepository();
             return rRep.addResource(memoryId, ownerId, type, location);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -283,7 +283,7 @@ public class Servant extends _MemoryCatcherImplBase {
             rRep = new ResourceRepository();
             return rRep.updateResource(res);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -294,7 +294,7 @@ public class Servant extends _MemoryCatcherImplBase {
             rRep = new ResourceRepository();
             return rRep.removeResource(resId);
         } catch (Exception ex) {
-            Logger.getLogger(Servant.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MemoryCatcherServant.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -336,7 +336,7 @@ public class Servant extends _MemoryCatcherImplBase {
     
     public static void main(String[] args) throws IOException, SQLException {
 
-        Servant ser = new Servant();
+        MemoryCatcherServant ser = new MemoryCatcherServant();
         
         String userName = "pobeirne";
         String pwd = "hdfx85j9";
@@ -425,22 +425,22 @@ public class Servant extends _MemoryCatcherImplBase {
 //        System.out.println("get all users count : " +users.length);
 //        
 //        //getUserByName(String name)
-//        ser = new Servant();
+//        ser = new MemoryCatcherServant();
 //        User userByName = ser.getUserByName("pobeirne");
 //        System.out.println("get user by name : " +userByName.name);
 //        
 //        //getUserById(int userId)
-//        ser = new Servant();
+//        ser = new MemoryCatcherServant();
 //        User userById = ser.getUserById(1);
 //        System.out.println("get username by id : " +userById.name);
 //        
 //        //addUser(String name, String pass)
-//        //ser = new Servant();      
+//        //ser = new MemoryCatcherServant();      
 //        //boolean addUser = ser.addUser("test","pass");
 //        //System.out.println("add new user t/f : " +addUser);
 //        
 //        //updateUser(User user)
-//        ser = new Servant();       
+//        ser = new MemoryCatcherServant();       
 //        userByName.tokens = 50;
 //        boolean updateUser = ser.updateUser(userByName);
 //        System.out.println("update user t/f : " +updateUser);        
@@ -449,22 +449,22 @@ public class Servant extends _MemoryCatcherImplBase {
 //        int user_b = 4;
 //
 //        //addFriend(int user_a, int user_b)
-//        ser = new Servant();
+//        ser = new MemoryCatcherServant();
 //        boolean addFriend = ser.addFriend(user_b, user_a);
 //        System.out.println("add friendship t/f : " +addFriend);     
 //
 //        //updateFriend(int user_a, int user_b, boolean active)
-//        ser = new Servant();
+//        ser = new MemoryCatcherServant();
 //        boolean updateFriend = ser.updateFriend(user_a, user_b, true);
 //        System.out.println("update friendship t/f : " +updateFriend);     
 //
 //        //getAllFriends(int userId)
-//        ser = new Servant();
+//        ser = new MemoryCatcherServant();
 //        User[] allFriends = ser.getAllFriends(user_a);
 //        System.out.println("friend count : " +allFriends.length);
 //
 //        //removeFriend(int user_a, int user_b) 
-//        ser = new Servant();
+//        ser = new MemoryCatcherServant();
 //        boolean removeFriend = ser.removeFriend(user_a, user_b);
 //        System.out.println("remove friend : " +removeFriend); 
 //        Memory[] allMemories = ser.getAllMemories();

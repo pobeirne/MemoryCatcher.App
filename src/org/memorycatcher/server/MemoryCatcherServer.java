@@ -5,7 +5,7 @@
  */
 package org.memorycatcher.server;
 
-import org.memorycatcher.servant.Servant;
+import org.memorycatcher.servant.MemoryCatcherServant;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import org.omg.CORBA.ORB;
@@ -22,7 +22,7 @@ public class MemoryCatcherServer {
             //Initialize the ORB
             ORB orb = ORB.init(args, null);
             //Instantiate the FundraisingAppServant on the server
-            Servant servantRef = new Servant();            
+            MemoryCatcherServant servantRef = new MemoryCatcherServant();            
             //Connect the FundraisingServant to the orb
             orb.connect(servantRef);
             //Store an object Reference to the FundraisingServant in a
